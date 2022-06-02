@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://thymeleaf.org">
+    <title>Update_Delete_Movie</title>
+</head>
+<body>
+<h3>Edit a movie by id</h3>
+<form th:action="@{/edit_movie}" method="post">
+    <label for="MovieId">ID of movie to be updated</label><br>
+    <input type="text" id="MovieId" name="MovieId" required minlength="1" maxlength="50" ><br><br>
+    <label for="MovieName">Updated MovieName:</label><br>
+    <input type="text" id="MovieName" name="MovieName" required minlength="2" maxlength="50" ><br><br>
+    <label for="ReleaseDate">Updated ReleaseDate:</label><br>
+    <input type="text" id="ReleaseDate" name="ReleaseDate" required minlength="4" maxlength="20"><br><br>
+    <label for="Rating">Updated Rating:</label><br>
+    <input type="Rating" id="Rating" name="Rating" required minlength="2" maxlength="3"><br><br>
+    <input type="submit" value="Edit movie">
+</form>
+<br>
+<h3>Delete a movie by id <b>(Note: Please delete only movies added by you)</b></h3>
+<form th:action="@{/delete_movie}" method="post">
+    <label for="Movie_Id">ID of movie to update</label><br>
+    <input type="text" id="Movie_Id" name="MovieId" required minlength="1" maxlength="50" ><br><br>
+    <input type="submit" value="Delete movie">
+</form>
+<br>
+<a th:href="@{/movies_list}">Go back to the movies list</a>
+</body>
+</html>

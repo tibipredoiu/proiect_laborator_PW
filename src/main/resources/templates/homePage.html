@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+
+<body>
+
+<style>
+    body {
+        background-color: aqua;);
+    }
+</style>
+<h2>Welcome to Home Page</h2>
+<br>
+<a th:href="@{/movies_list}">Movies List</a>
+<br>
+<br>
+<a th:href="@{/register}">Register Here</a>
+<br>
+<h4>Or already have an account? <a th:href="@{/login}">Login Here</a></h4>
+</body>
+</html>
